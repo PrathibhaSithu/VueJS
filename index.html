@@ -20,7 +20,21 @@
         <button v-on:click="age--">Decrease</button>
         <br/><br/>
         <div @click="name = 'Name is Luna'">Change Name</div>
-        <div @click="">change title :)</div>
+        <div @click="changeTitle">change title :)</div>
+
+
+        <div v-if = "showDete">
+            <p>
+                {{ title }} <br/> 
+                {{ name }} <br/>
+                {{ age }} <br/>
+                {{ count }} <br/>
+            </p>
+
+            <button>
+                <span>Show Books</span>
+            </button>
+        </div>
 
         <h2>I am not working when mount is running but if im running it means there is no mount</h2>
     </div>
