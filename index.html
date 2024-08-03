@@ -9,8 +9,29 @@
     <h1>Hello</h1>
 
     <div id="app">
-        <h2>I am not working when mount is running</h2>
+        <p>
+            {{ title }} <br/> 
+            {{ name }} <br/>
+            {{ age }} <br/>
+            {{ count }} <br/>
+        </p>
+        <button v-on:click="age++">v-on(onclick) is a vue directive</button>
+        <br/><br/>
+        <button v-on:click="age--">Decrease</button>
+        <br/><br/>
+        <div @click="name = 'Name is Luna'">Change Name</div>
+        <div @click="">change title :)</div>
+
+        <h2>I am not working when mount is running but if im running it means there is no mount</h2>
     </div>
+
+    <p>
+        pov : I am not working outside the div app
+        <br/> 
+        {{ title }} - 
+        {{ name }} -
+        {{ age }}
+    </p>
 
     <script src="app.js"></script>
 </body>
