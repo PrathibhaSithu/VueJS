@@ -13,6 +13,7 @@
         <div v-if="showBooks">
             <ul>
                 <li v-for="book in books">
+                    <img :src ="book.img" :alt="book.title" class = "styled-image">
                     <h3> {{ book.title}} </h3>
                     <p> {{ book.author }} </p>
                 </li>
