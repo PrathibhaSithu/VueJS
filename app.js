@@ -4,8 +4,8 @@ const app = Vue.createApp({
             title: 'The Final Empire',
             name: 'Prathibha Sithumini',
             age: 24,
-            count: 0,
-            showDete: false
+            // count: 0,
+            showDete: true
         }
     },
     methods:{
@@ -17,7 +17,13 @@ const app = Vue.createApp({
         },
         decrement(){
             this.count--
-        }
+        },
+        handleEvent(){
+            console.log('Event Handled')
+        },
+        handleLeaveEvent(){
+            console.log('I am Leaving')
+        },
     }
 })
 

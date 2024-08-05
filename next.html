@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Learn</title>
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hello Again....!</h1>
+
+    <div id="app">
+
+        <div v-if="showDetails">
+        <p>
+            {{ title }} <br/> 
+            {{ name }} <br/>
+            {{ age }} <br/>
+            {{ count }} <br/>
+        </p>
+    </div>
+        <button @click="toggleShowDetails">
+            <span v-if="showDetails">Hide Details</span>
+            <span v-else>Show Details</span>
+        </button>
+        <br/>
+
+        <!-- mouse events -->
+         <div class="box" v-on:mouseover="handleEvent">Mouse Over</div>
+         <div class="box" @mouseleave="handleLeaveEvent">Mouse Leave</div>
+         <div class="box">Double Click</div>
+         <div class="box"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
