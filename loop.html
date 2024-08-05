@@ -10,27 +10,42 @@
     <h1>Hello Loop....!</h1>
 
     <div id="app">
+        <div v-if="showBooks">
+            <p>
+                {{ books[0].title }} - {{ books[0].author }}
+            </p>
+            <p>
+                {{ books[1].title }} - {{ books[1].author }}
+            </p>
+            <p>
+                {{ books[2].title }} - {{ books[2].author }}
+            </p>
+            <p>
+                {{ books[3].title }} - {{ books[3].author }}
+            </p>
+            <p>
+                {{ books[4].title }} - {{ books[4].author }}
+            </p>
+        </div>
 
-        <div v-if="showDetails">
-        <p>
-            {{ title }} <br/> 
-            {{ name }} <br/>
-            {{ age }} <br/>
-            {{ count }} <br/>
-        </p>
-    </div>
-        <button @click="toggleShowDetails">
-            <span v-if="showDetails">Hide Details</span>
-            <span v-else>Show Details</span>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
         </button>
-        <br/>
 
-        <!-- mouse events -->
-         <div class="box" v-on:mouseover="handleEvent($event, 2)">Mouse Over</div>
-         <div class="box" @mouseover="handleEvent">Again Mouse Over</div>
-         <div class="box" @mouseleave="handleLeaveEvent">Mouse Leave</div>
-         <div class="box" @dblclick="handleClickEvent">Double Click</div>
-         <div class="box" @mousemove="handleMouseMove">Position - {{ x }} {{ y }}</div>
+    
+        <h1>
+            -----------------------------------------------------------------
+        </h1>
+        <div>
+            <ul>
+                <li v-for="book in books">
+                    <h3> {{ book.title}} </h3>
+                    <p> {{ book.author }} </p>
+                </li>
+            </ul>
+        </div>
+        
     </div>
 
     <script src="Array.js"></script>
