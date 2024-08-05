@@ -5,7 +5,9 @@ const app = Vue.createApp({
             name: 'Prathibha Sithumini',
             age: 24,
             // count: 0,
-            showDete: true
+            showDete: true,
+            x: 0,
+            y: 0,
         }
     },
     methods:{
@@ -18,11 +20,21 @@ const app = Vue.createApp({
         decrement(){
             this.count--
         },
-        handleEvent(){
-            console.log('Event Handled')
+        handleEvent(e, data){
+            console.log(e, e.type)
+            if(data){
+                console.log(data)
+            }
         },
         handleLeaveEvent(){
             console.log('I am Leaving')
+        },
+        handleClickEvent(){
+            console.log('I am Clicked')
+        },
+        handleMouseMove(e){
+            this.x = e.offsetX
+            this.y = e.offsetY
         },
     }
 })
