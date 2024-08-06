@@ -19,7 +19,7 @@ const app = Vue.createApp({
         toggleFav(book){
             book.isFav = !book.isFav
         },
-    }
+    },
 })
 
 app.mount('#app')
