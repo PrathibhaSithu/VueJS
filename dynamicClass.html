@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Learn</title>
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hello Attribute Binding....!</h1>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <ul>
+                <li v-for="book in books">
+                    <img :src ="book.img" :alt="book.title" class = "styled-image">
+                    <h3> {{ book.title}} </h3>
+                    <p> {{ book.author }} </p>
+                </li>
+            </ul>
+        </div>
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+
+        <h1>
+            -----------------------------------------------------------------
+        </h1>
+    </div>
+
+    <script src="dynamic.js"></script>
+</body>
+</html>
